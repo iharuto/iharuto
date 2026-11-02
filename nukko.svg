@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="392" viewBox="0 0 1000 392" role="img" aria-label="Animated ASCII cat: a cat sits, stretches toward a sleepy friend, then sits again.">
+<!-- ASCII cat poses adapted from user-linked r/EmoticonHub post: https://www.reddit.com/r/EmoticonHub/comments/1k14xq8/cat_being_cat_ascii_art/ -->
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c1424"/><stop offset="1" stop-color="#101827"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#264d4a" stop-opacity=".58"/><stop offset="1" stop-color="#264d4a" stop-opacity="0"/></radialGradient>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#7b9d99" opacity=".13"/></pattern>
+</defs>
+<style>
+  .frame {fill:#bcebdc;font-size:18px;font-family:'Noto Sans Mono CJK JP','MS Gothic','Osaka-Mono',monospace;font-weight:400;white-space:pre}
+  .idle {animation: idle 7s steps(1,end) infinite;}
+  .reach {animation: reach 7s steps(1,end) infinite;opacity:0;}
+  @keyframes idle { 0%,22%,73%,100% {opacity:1} 25%,70% {opacity:0} }
+  @keyframes reach { 0%,22%,73%,100% {opacity:0} 25%,70% {opacity:1} }
+  .breathe {animation: breathe 3s ease-in-out infinite;transform-origin:center;transform-box:fill-box;}
+  @keyframes breathe {0%,100%{transform:translateY(1px)}50%{transform:translateY(-2px)}}
+  .dot {animation: twinkle 2.4s ease-in-out infinite;}
+  @keyframes twinkle {0%,100%{opacity:.25}50%{opacity:1}}
+  .blink {animation: blink 7s steps(1,end) infinite;}
+  @keyframes blink {0%,94%,100%{opacity:1}95%,97%{opacity:.1}}
+  .sleep {animation: snooze 3.3s ease-in-out infinite;}
+  @keyframes snooze {0%{transform:translate(0,12px);opacity:0}30%{opacity:.8}100%{transform:translate(18px,-28px);opacity:0}}
+  .sleep2 {animation-delay:1.1s}
+  .sleep3 {animation-delay:2.2s}
+  @media (prefers-reduced-motion:reduce) { .idle,.reach,.breathe,.dot,.blink,.sleep {animation:none!important} .reach{opacity:0}.idle{opacity:1} }
+</style>
+<rect width="1000" height="392" rx="20" fill="url(#bg)"/>
+<rect width="1000" height="392" rx="20" fill="url(#dots)"/>
+<ellipse cx="480" cy="220" rx="365" ry="170" fill="url(#halo)"/>
+<rect x="22" y="22" width="956" height="348" rx="14" fill="none" stroke="#708d90" stroke-opacity=".22"/>
+<g font-family="'Noto Sans Mono',monospace" font-size="13">
+ <circle cx="48" cy="47" r="5" fill="#f48a85"/><circle cx="67" cy="47" r="5" fill="#eac780"/><circle cx="86" cy="47" r="5" fill="#93c5aa"/>
+ <text x="114" y="52" fill="#829ea6">~/iharuto/cat.sh</text>
+ <text x="910" y="52" fill="#4c978c">● LIVE</text>
+</g>
+<line x1="36" y1="68" x2="964" y2="68" stroke="#708d90" stroke-opacity=".17"/>
+<g class="breathe">
+ <text class="frame idle"><tspan x="88" y="96">　　　　　　　　　　　　／´ 　 &#x27;フ、</tspan>
+<tspan x="88" y="115">　　　　　　　　　　　 i &#x27;/ゝ　 ´　,!</tspan>
+<tspan x="88" y="134">　　　　　　　　　　　.ﾍ&#x27;　 _,　 r 彡</tspan>
+<tspan x="88" y="153">　　　　　　　　 　／ 　`ミ __,xノﾞ､</tspan>
+<tspan x="88" y="172">.　　　　　　　 　/　　　　　　　　i</tspan>
+<tspan x="88" y="191">　　　　　　 　 ,&#x27;　　　　.　　　　 ,&#x27;</tspan>
+<tspan x="88" y="210">　　　　　　　 ;　　　　　&#x27;,　　l　 l</tspan>
+<tspan x="88" y="229">　　　 　　　　i　 　 　 　|. 　|　|</tspan>
+<tspan x="88" y="248">　　　 　　,.-‐!　　　　　ﾐ　　i　i</tspan>
+<tspan x="88" y="267">　　 　　//´｀｀､　　　　ミ　　､ ｰ､.　　_,,..,,,,,,_</tspan>
+<tspan x="88" y="286">.　　　　| l　　 　｀──-ﾊ､,,),)&#x27;&#x27;&#x27;´　. / ,&#x27; 3　 `ヽｰっ</tspan>
+<tspan x="88" y="305">　　　 　ヽ.ー─&#x27;´)　　　　 　　　　　l　　 ⊃　　⌒_つ</tspan>
+<tspan x="88" y="324">　　　　　　`&quot;&quot;&quot;´　　　　　　　　　　 `&#x27;&#x27;ｰ---‐&#x27;&#x27;&#x27;&#x27;&#x27;&quot;</tspan></text>
+ <text class="frame reach"><tspan x="88" y="110">　　　　　　　　　　　　　　　　　＿</tspan>
+<tspan x="88" y="131">　　　　　　　　 　　　　　　／´　　｀フ</tspan>
+<tspan x="88" y="152">　　　　　　　　　,　&#x27;&#x27; ｀ ｀ / 　　　　　,!</tspan>
+<tspan x="88" y="173">.　　　　　　　 , &#x27; 　　　　 レ 　 _,　 rミ</tspan>
+<tspan x="88" y="194">　　　　　　　 ; 　 　 　 　 　`ミ __,xノﾞ､　ｿｰ</tspan>
+<tspan x="88" y="215">　　　 　　　　i　 　　　ﾐ　　　; ,､､､、　ヽ、</tspan>
+<tspan x="88" y="236">　　　 　　,.-‐! 　 　 　 ﾐ　　i　　　　｀ヽ.._,,))</tspan>
+<tspan x="88" y="257">　　 　　//´｀｀､　　　　 ミ　ヽ.　　　　_,,..,,,,,,_</tspan>
+<tspan x="88" y="278">.　　　　| l　　 　｀ ｰｰ -‐&#x27;&#x27;ゝ､,,))　　./ ,&#x27; 3　 `ヽｰっ</tspan>
+<tspan x="88" y="299">　　　 　ヽ.ー─&#x27;´)　　　　　　　 　　l　　 ⊃　　⌒_つ</tspan>
+<tspan x="88" y="320">　　　　　　&#x27;&#x27;&#x27;&#x27;&#x27;&#x27;&#x27;　　　　　　　　　　　 `&#x27;&#x27;ｰ---‐&#x27;&#x27;&#x27;&#x27;&#x27;&quot;</tspan></text>
+</g>
+<g fill="#7ed7c3" font-family="'Noto Sans Mono',monospace" font-size="15" font-weight="500">
+ <text class="sleep" x="585" y="235">z</text>
+ <text class="sleep sleep2" x="611" y="205">Z</text>
+ <text class="sleep sleep3" x="638" y="179">z</text>
+</g>
+<g font-family="'Noto Sans Mono',monospace">
+  <text x="48" y="348" fill="#8ba9ae" font-size="12">&gt; doing important cat things...</text>
+  <text x="875" y="348" fill="#5f8e84" font-size="11">[loop ∞]</text>
+  <rect class="blink" x="331" y="338" width="8" height="13" fill="#a1e9d1"/>
+</g>
+<circle class="dot" cx="800" cy="111" r="1.9" fill="#acddc5"/>
+<circle class="dot" cx="833" cy="136" r="1.1" fill="#acddc5" style="animation-delay:1.1s"/>
+<circle class="dot" cx="115" cy="310" r="1.5" fill="#acddc5" style="animation-delay:.4s"/>
+</svg>

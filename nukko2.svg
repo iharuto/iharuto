@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-label="Animated ASCII cat. The cat sleeps, wakes up, walks a little, eats a donut, walks back, and sleeps again in a loop.">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#0b1320"/>
+    <stop offset="1" stop-color="#101b2d"/>
+  </linearGradient>
+  <radialGradient id="glow">
+    <stop stop-color="#224c46" stop-opacity="0.6"/>
+    <stop offset="1" stop-color="#224c46" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+    <circle cx="1.6" cy="1.6" r="0.9" fill="#8dc7ba" opacity=".11"/>
+  </pattern>
+</defs>
+<style>
+  .frame {
+    fill:#bfeedd;
+    font-size:19px;
+    font-family:'Noto Sans Mono CJK JP','MS Gothic','Osaka-Mono',monospace;
+    white-space:pre;
+  }
+  .small {font-family:'Noto Sans Mono',monospace;}
+
+  .f-sleep   {animation: show-sleep 14s steps(1,end) infinite;}
+  .f-wake    {animation: show-wake 14s steps(1,end) infinite; opacity:0;}
+  .f-walk1   {animation: show-walk1 14s steps(1,end) infinite; opacity:0;}
+  .f-walk2   {animation: show-walk2 14s steps(1,end) infinite; opacity:0;}
+  .f-eat     {animation: show-eat 14s steps(1,end) infinite; opacity:0;}
+  .f-return  {animation: show-return 14s steps(1,end) infinite; opacity:0;}
+
+  @keyframes show-sleep  {0%,18%,84%,100%{opacity:1} 20%,82%{opacity:0}}
+  @keyframes show-wake   {0%,18%,100%{opacity:0} 20%,28%{opacity:1} 30%{opacity:0}}
+  @keyframes show-walk1  {0%,28%,100%{opacity:0} 30%,38%{opacity:1} 40%{opacity:0}}
+  @keyframes show-walk2  {0%,38%,100%{opacity:0} 40%,48%{opacity:1} 50%{opacity:0}}
+  @keyframes show-eat    {0%,48%,100%{opacity:0} 50%,64%{opacity:1} 66%{opacity:0}}
+  @keyframes show-return {0%,64%,100%{opacity:0} 66%,82%{opacity:1} 84%{opacity:0}}
+
+  .breathe-soft {animation: breathe-soft 3.2s ease-in-out infinite; transform-origin:center; transform-box:fill-box;}
+  .breathe-deep {animation: breathe-deep 2.9s ease-in-out infinite; transform-origin:center; transform-box:fill-box;}
+  .breathe-walk {animation: breathe-walk 1.8s ease-in-out infinite; transform-origin:center; transform-box:fill-box;}
+  @keyframes breathe-soft {0%,100%{transform:translateY(1px)}50%{transform:translateY(-2px)}}
+  @keyframes breathe-deep {0%,100%{transform:translateY(2px)}50%{transform:translateY(-3px)}}
+  @keyframes breathe-walk {0%,100%{transform:translateY(0)}50%{transform:translateY(-1px)}}
+
+  .zzz1 {animation: zzz1 14s ease-in-out infinite;}
+  .zzz2 {animation: zzz2 14s ease-in-out infinite;}
+  .zzz3 {animation: zzz3 14s ease-in-out infinite;}
+  @keyframes zzz1 {0%{opacity:0;transform:translate(0,16px)} 5%,14%{opacity:.85} 18%{opacity:0;transform:translate(18px,-14px)} 100%{opacity:0;transform:translate(18px,-14px)}}
+  @keyframes zzz2 {0%,4%{opacity:0;transform:translate(0,16px)} 9%,16%{opacity:.8} 20%{opacity:0;transform:translate(18px,-14px)} 100%{opacity:0;transform:translate(18px,-14px)}}
+  @keyframes zzz3 {0%,8%{opacity:0;transform:translate(0,16px)} 12%,17%{opacity:.75} 22%{opacity:0;transform:translate(18px,-14px)} 100%{opacity:0;transform:translate(18px,-14px)}}
+
+  .donut {animation: donutshow 14s steps(1,end) infinite; opacity:0;}
+  @keyframes donutshow {0%,28%{opacity:0} 30%,72%{opacity:1} 74%,100%{opacity:0}}
+  .bite {animation: biteshow 14s steps(1,end) infinite; opacity:0;}
+  @keyframes biteshow {0%,50%{opacity:0} 52%,64%{opacity:1} 66%,100%{opacity:0}}
+  .crumb1 {animation: crumb1 14s ease-out infinite; opacity:0;}
+  .crumb2 {animation: crumb2 14s ease-out infinite; opacity:0;}
+  @keyframes crumb1 {0%,50%{opacity:0;transform:translate(0,0)} 54%{opacity:1} 62%{opacity:0;transform:translate(18px,14px)} 100%{opacity:0;transform:translate(18px,14px)}}
+  @keyframes crumb2 {0%,52%{opacity:0;transform:translate(0,0)} 56%{opacity:1} 64%{opacity:0;transform:translate(10px,-8px)} 100%{opacity:0;transform:translate(10px,-8px)}}
+
+  .cursor {animation: blink 1.1s steps(1,end) infinite;}
+  @keyframes blink {0%,48%{opacity:1} 50%,100%{opacity:0}}
+  .twinkle {animation: twinkle 2.7s ease-in-out infinite;}
+  @keyframes twinkle {0%,100%{opacity:.22}50%{opacity:1}}
+  @media (prefers-reduced-motion: reduce) {
+    .f-sleep,.f-wake,.f-walk1,.f-walk2,.f-eat,.f-return,.breathe-soft,.breathe-deep,.breathe-walk,.zzz1,.zzz2,.zzz3,.donut,.bite,.crumb1,.crumb2,.cursor,.twinkle {animation:none!important;}
+    .f-sleep{opacity:1} .f-wake,.f-walk1,.f-walk2,.f-eat,.f-return{opacity:0}
+  }
+</style>
+
+<rect width="1100" height="430" rx="22" fill="url(#bg)"/>
+<rect width="1100" height="430" rx="22" fill="url(#dots)"/>
+<ellipse cx="505" cy="225" rx="390" ry="175" fill="url(#glow)"/>
+<rect x="22" y="22" width="1056" height="386" rx="16" fill="none" stroke="#76949d" stroke-opacity=".22"/>
+
+<g class="small" font-size="13">
+ <circle cx="52" cy="48" r="5" fill="#f48a85"/>
+ <circle cx="72" cy="48" r="5" fill="#e7c67c"/>
+ <circle cx="92" cy="48" r="5" fill="#92c5aa"/>
+ <text x="122" y="53" fill="#86a5ac">~/iharuto/ascii-cat-donut.svg</text>
+ <text x="893" y="53" fill="#56a692">● README READY</text>
+</g>
+<line x1="36" y1="70" x2="1064" y2="70" stroke="#6d8e96" stroke-opacity=".18"/>
+
+<!-- guide line / floor -->
+<line x1="96" y1="285" x2="1000" y2="285" stroke="#4b6472" stroke-opacity=".34" stroke-dasharray="4 8"/>
+
+<!-- donut -->
+<g class="donut" transform="translate(785 198)">
+  <circle cx="0" cy="0" r="38" fill="#e6b26f"/>
+  <circle cx="0" cy="0" r="17" fill="#101b2d"/>
+  <path d="M-28 -6 C-12 -26, 12 -26, 28 -6 C25 16, 6 28, -12 26 C-25 24, -35 11, -28 -6 Z" fill="#ef8b9b" opacity=".96"/>
+  <circle cx="-18" cy="-8" r="2.5" fill="#7de2dc"/>
+  <circle cx="-2" cy="-17" r="2.4" fill="#f6eb86"/>
+  <circle cx="12" cy="-7" r="2.4" fill="#8ce3a4"/>
+  <circle cx="3" cy="11" r="2.5" fill="#b19cff"/>
+  <circle cx="20" cy="7" r="2.3" fill="#fff"/>
+  <circle cx="-12" cy="14" r="2.2" fill="#fff"/>
+  <path class="bite" d="M30 -18 C18 -18, 12 -8, 10 2 C18 0, 26 4, 31 10 C36 2, 39 -11, 30 -18 Z" fill="#101b2d"/>
+  <circle class="crumb1" cx="42" cy="0" r="3.1" fill="#e6b26f"/>
+  <circle class="crumb2" cx="34" cy="-10" r="2.4" fill="#ef8b9b"/>
+</g>
+
+<!-- zzz -->
+<g fill="#7fe0ca" class="small" font-size="17" font-weight="600">
+  <text class="zzz1" x="428" y="116">z</text>
+  <text class="zzz2" x="452" y="96">Z</text>
+  <text class="zzz3" x="476" y="78">z</text>
+</g>
+
+<!-- cat frames -->
+<g class="breathe-deep f-sleep">
+  <text class="frame"><tspan x="110" y="107">　　　　　　　　　　 ＿＿</tspan>
+<tspan x="110" y="128">　　　　　　　　／＞　　フ</tspan>
+<tspan x="110" y="149">　　　　　　　　| 　－　－ l</tspan>
+<tspan x="110" y="170">　　　　 　　　／` ミ＿xノ</tspan>
+<tspan x="110" y="191">　　　　　 　 /　　　 　 |</tspan>
+<tspan x="110" y="212">　　　 　 　 /　 ヽ　　 ﾉ</tspan>
+<tspan x="110" y="233">　　 　 ／￣|　　 |　|　|</tspan>
+<tspan x="110" y="254">　　　 (￣ヽ＿_ヽ_)__)</tspan></text>
+</g>
+<g class="breathe-soft f-wake">
+  <text class="frame"><tspan x="110" y="107">　　　　　　　　　　 ＿＿</tspan>
+<tspan x="110" y="128">　　　　　　　　／＞　　フ</tspan>
+<tspan x="110" y="149">　　　　　　　　| 　－　－ l</tspan>
+<tspan x="110" y="170">　　　　 　　　／` ミ＿xノ</tspan>
+<tspan x="110" y="191">　　　　　 　 /　　　 　 |</tspan>
+<tspan x="110" y="212">　　　 　 　 /　 ヽ　　 ﾉ</tspan>
+<tspan x="110" y="233">　　 　 ／￣|　　 |　|　|</tspan>
+<tspan x="110" y="254">　　　 (￣ヽ＿_ヽ_)__)</tspan></text>
+</g>
+<g class="breathe-walk f-walk1" transform="translate(34 0)">
+  <text class="frame"><tspan x="110" y="107">　　　　　　　　　　 ＿＿</tspan>
+<tspan x="110" y="128">　　　　　　　　／＞　　フ</tspan>
+<tspan x="110" y="149">　　　　　　　　| 　－　－ l</tspan>
+<tspan x="110" y="170">　　　　 　　　／` ミ＿xノ</tspan>
+<tspan x="110" y="191">　　　　　 　 /　　　 　 |</tspan>
+<tspan x="110" y="212">　　　 　 　 /　 ヽ　　 ﾉ</tspan>
+<tspan x="110" y="233">　　 　 　  /　 / |　|　|</tspan>
+<tspan x="110" y="254">　　　　　(＿ノ　(＿_)_)</tspan></text>
+</g>
+<g class="breathe-walk f-walk2" transform="translate(82 0)">
+  <text class="frame"><tspan x="110" y="107">　　　　　　　　　　 ＿＿</tspan>
+<tspan x="110" y="128">　　　　　　　　／＞　　フ</tspan>
+<tspan x="110" y="149">　　　　　　　　| 　－　－ l</tspan>
+<tspan x="110" y="170">　　　　 　　　／` ミ＿xノ</tspan>
+<tspan x="110" y="191">　　　　　 　 /　　　 　 |</tspan>
+<tspan x="110" y="212">　　　 　 　 /　 ヽ　　 ﾉ</tspan>
+<tspan x="110" y="233">　　 　 　  /　 /  |　|　|</tspan>
+<tspan x="110" y="254">　　　　　(＿_/　 (＿_)_)</tspan></text>
+</g>
+<g class="breathe-soft f-eat" transform="translate(125 0)">
+  <text class="frame"><tspan x="110" y="107">　　　　　　　　　　 ＿＿</tspan>
+<tspan x="110" y="128">　　　　　　　　／＞　　フ</tspan>
+<tspan x="110" y="149">　　　　　　　　| 　－　－ l</tspan>
+<tspan x="110" y="170">　　　　 　　　／` ミ＿xノ　　もぐ</tspan>
+<tspan x="110" y="191">　　　　　 　 /　　　 　 |　　もぐ</tspan>
+<tspan x="110" y="212">　　　 　 　 /　 ヽ　　 ﾉ</tspan>
+<tspan x="110" y="233">　　 　 　  /　 / |　|　|</tspan>
+<tspan x="110" y="254">　　　　　(＿ノ　(＿_)_)</tspan></text>
+</g>
+<g class="breathe-walk f-return" transform="translate(42 0)">
+  <text class="frame"><tspan x="110" y="107">　　　　　　　　　　 ＿＿</tspan>
+<tspan x="110" y="128">　　　　　　　　／＞　　フ</tspan>
+<tspan x="110" y="149">　　　　　　　　| 　－　－ l</tspan>
+<tspan x="110" y="170">　　　　 　　　／` ミ＿xノ</tspan>
+<tspan x="110" y="191">　　　　　 　 /　　　 　 |</tspan>
+<tspan x="110" y="212">　　　 　 　 /　 ヽ　　 ﾉ</tspan>
+<tspan x="110" y="233">　　 　 　  /　 /  |　|　|</tspan>
+<tspan x="110" y="254">　　　　　(＿_/　 (＿_)_)</tspan></text>
+</g>
+
+<g class="small">
+  <text x="48" y="356" fill="#8ba9ae" font-size="12">&gt; sleep → wake → walk → donut → return → sleep</text>
+  <text x="881" y="356" fill="#65a08b" font-size="11">[loop ∞ breathing on]</text>
+  <rect class="cursor" x="398" y="346" width="8" height="13" fill="#a1e9d1"/>
+</g>
+
+<g fill="#a6dcc8">
+  <circle class="twinkle" cx="877" cy="111" r="1.8"/>
+  <circle class="twinkle" cx="915" cy="141" r="1.2" style="animation-delay:1.1s"/>
+  <circle class="twinkle" cx="147" cy="317" r="1.5" style="animation-delay:.4s"/>
+</g>
+</svg>

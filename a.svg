@@ -1,0 +1,25 @@
+<style>
+  #circular-arrows,
+  #inner-rotor {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  #circular-arrows {
+    animation: spin-outer 3s linear infinite;
+  }
+
+  #inner-rotor {
+    animation: spin-inner 6s linear infinite;
+  }
+
+  @keyframes spin-outer {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  @keyframes spin-inner {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+  }
+</style>
